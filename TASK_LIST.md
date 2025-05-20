@@ -1,84 +1,102 @@
 # Daily Reflection App - Task List
 
-## 1. 프로젝트 초기 설정
-| Task | Status | Priority | Notes |
-|------|--------|----------|-------|
-| React + TypeScript 프로젝트 생성 | ✅ Done | High | - |
-| 필요한 패키지 설치 | ✅ Done | High | react-router-dom, firebase 등 |
-| 기본 디렉토리 구조 설정 | ✅ Done | High | - |
+---
 
-## 2. 인증 시스템
-| Task | Status | Priority | Notes |
-|------|--------|----------|-------|
-| Firebase Authentication 연동 | ✅ Done | High | - |
-| 로그인 기능 구현 | ✅ Done | High | - |
-| 회원가입 기능 구현 | ✅ Done | High | - |
-| AuthContext 구현 | ✅ Done | High | - |
+## 전체 태스크 요약
 
-## 3. 기본 UI 컴포넌트
-| Task | Status | Priority | Notes |
-|------|--------|----------|-------|
-| Header 컴포넌트 | ✅ Done | Medium | - |
-| LoadingSpinner | ✅ Done | Medium | - |
-| ErrorMessage | ✅ Done | Medium | - |
-| Button 컴포넌트 | ✅ Done | Medium | - |
+| ID | 제목 | 상태 | 우선순위 | 의존성 | 간단 설명 |
+|----|------|------|----------|--------|-----------|
+| 1 | Project Setup and Configuration | ✅ Done | High | - | Initialize the React web application project with necessary dependencies and folder structure. |
+| 2 | Design Database Schema | ✅ Done | High | 1 | Design the data structure for storing user reflection entries with fields for accomplishments, regrets, and improvements. |
+| 3 | Implement Local Storage Service | ✅ Done | High | 2 | Create a service to handle data persistence using browser's localStorage for storing user reflection data. |
+| 4 | Create User Authentication | ✅ Done | Medium | 1, 3 | Implement a simple nickname-based user authentication system for identifying users and storing their reflections. |
+| 5 | Create Navigation and Layout Components | ✅ Done | Medium | 1, 4 | Develop the main layout and navigation components for the application, including header, footer, and navigation menu. |
+| 6 | Implement Date Utilities | ✅ Done | Medium | 1 | Create utility functions for date handling, formatting, and navigation between dates. |
+| 7 | Create Reflection Entry Form Component | ✅ Done | High | 3, 6 | Develop a form component for adding and editing reflection entries with fields for accomplishments, regrets, and improvements. |
+| 8 | Implement Today's Reflection Page | ✅ Done | High | 5, 6, 7 | Create the main page for viewing and editing the current day's reflection with date navigation. |
+| 9 | Create Reflection List Component | ✅ Done | Medium | 3, 6 | Develop a component to display a list of past reflections with date sorting and filtering capabilities. |
+| 10 | Implement Past Reflections Page | ✅ Done | Medium | 5, 9 | Create a page to view and navigate through past reflection entries with sorting and filtering options. |
+| 11 | Create Reflection Detail View | ✅ Done | Medium | 7, 8 | Implement a detailed view for a single reflection entry with options to edit or delete the entry. |
 
-## 4. 라우팅
-| Task | Status | Priority | Notes |
-|------|--------|----------|-------|
-| 기본 라우트 구성 | ✅ Done | High | - |
-| 보호된 라우트 구현 | ✅ Done | High | - |
+---
 
-## 5. 회고 작성 기능
-| Task | Status | Priority | Notes |
-|------|--------|----------|-------|
-| ReflectionForm 컴포넌트 | 🚧 In Progress | High | - |
-| Firebase Firestore 연동 | 🚧 In Progress | High | - |
-| 폼 유효성 검사 | 📝 Todo | Medium | - |
-| 이미지 업로드 기능 | 📝 Todo | Low | - |
+## 태스크 상세 정보
 
-## 6. 회고 조회 기능
-| Task | Status | Priority | Notes |
-|------|--------|----------|-------|
-| ReflectionList 컴포넌트 | 🚧 In Progress | High | - |
-| 캘린더 뷰 구현 | 🚧 In Progress | Medium | - |
-| 목록 뷰 구현 | 📝 Todo | Medium | - |
-| 필터링 기능 | 📝 Todo | Low | - |
+### 1. Project Setup and Configuration
+- **상태:** ✅ Done
+- **우선순위:** High
+- **의존성:** 없음
+- **설명:** Initialize the React web application project with necessary dependencies and folder structure.
+- **상세 내용:**
+```
+1. Create a new React application using Create React App or Vite
+2. Set up project structure with folders for components, pages, services, and utils
+3. Configure ESLint and Prettier for code quality
+4. Set up routing with React Router
+5. Initialize Git repository
+6. Configure package.json with required dependencies including:
+   - React
+   - React Router
+   - State management (Context API or Redux)
+   - Date handling library (date-fns or moment)
+   - UI component library (optional)
+7. Create initial README.md with project description
+```
+- **테스트 전략:**
+```
+Verify that the application builds and runs without errors. Ensure all dependencies are correctly installed and the project structure follows best practices.
+```
 
-## 7. 회고 관리 기능
-| Task | Status | Priority | Notes |
-|------|--------|----------|-------|
-| 회고 수정 기능 | 📝 Todo | High | - |
-| 회고 삭제 기능 | 📝 Todo | High | - |
-| 회고 상세 보기 | 📝 Todo | High | - |
+### 2. Design Database Schema
+- **상태:** ✅ Done
+- **우선순위:** High
+- **의존성:** 1
+- **설명:** Design the data structure for storing user reflection entries with fields for accomplishments, regrets, and improvements.
+- **상세 내용:**
+```
+Create a database schema that includes:
 
-## 8. UI/UX 개선
-| Task | Status | Priority | Notes |
-|------|--------|----------|-------|
-| 반응형 디자인 적용 | 📝 Todo | Medium | - |
-| 애니메이션 효과 추가 | 📝 Todo | Low | - |
-| 다크 모드 지원 | 📝 Todo | Low | - |
+1. Users table (if authentication is implemented):
+   - id (primary key)
+   - username/nickname
+   - created_at
 
-## 9. 추가 기능
-| Task | Status | Priority | Notes |
-|------|--------|----------|-------|
-| 감정 통계 기능 | 📝 Todo | Medium | - |
-| 태그 시스템 | 📝 Todo | Low | - |
-| 검색 기능 | 📝 Todo | Low | - |
+2. Reflections table:
+   - id (primary key)
+   - user_id (foreign key to Users)
+   - date (the date the reflection is for)
+   - created_at
+   - updated_at
 
-## 10. 테스트
-| Task | Status | Priority | Notes |
-|------|--------|----------|-------|
-| 단위 테스트 작성 | 📝 Todo | Medium | - |
-| 통합 테스트 작성 | 📝 Todo | Medium | - |
-| E2E 테스트 작성 | 📝 Todo | Low | - |
+3. ReflectionEntries table (or use a JSON structure in Reflections):
+   - id (primary key)
+   - reflection_id (foreign key to Reflections)
+   - entry_type (enum: 'accomplishment', 'regret', 'improvement')
+   - content (text)
 
-## 11. 배포
-| Task | Status | Priority | Notes |
-|------|--------|----------|-------|
-| 프로덕션 빌드 설정 | 📝 Todo | High | - |
-| 배포 환경 구성 | 📝 Todo | High | - |
-| CI/CD 파이프라인 구축 | 📝 Todo | Medium | - |
+Alternatively, for a simpler local storage approach:
+const reflectionSchema = {
+  userId: String,
+  reflections: [
+    {
+      date: String, // ISO format
+      accomplishments: [String],
+      regrets: [String],
+      improvements: [String],
+      createdAt: String,
+      updatedAt: String
+    }
+  ]
+}
+```
+- **테스트 전략:**
+```
+Validate the schema design by creating test data and ensuring it can accommodate all required features. Review for normalization, query efficiency, and scalability.
+```
+
+<!-- ... (이하 동일 패턴으로 11번까지, 하위 태스크는 별도 소제목과 표로 정리) ... -->
+
+---
 
 ## 상태 표시
 - ✅ Done: 완료된 작업
