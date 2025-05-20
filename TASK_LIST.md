@@ -1,4 +1,4 @@
-# Daily Reflection App - Task List
+# 데일리 리플렉션 앱 - 태스크 목록
 
 ---
 
@@ -6,80 +6,80 @@
 
 | ID | 제목 | 상태 | 우선순위 | 의존성 | 간단 설명 |
 |----|------|------|----------|--------|-----------|
-| 1 | Project Setup and Configuration | ✅ Done | High | - | Initialize the React web application project with necessary dependencies and folder structure. |
-| 2 | Design Database Schema | ✅ Done | High | 1 | Design the data structure for storing user reflection entries with fields for accomplishments, regrets, and improvements. |
-| 3 | Implement Local Storage Service | ✅ Done | High | 2 | Create a service to handle data persistence using browser's localStorage for storing user reflection data. |
-| 4 | Create User Authentication | ✅ Done | Medium | 1, 3 | Implement a simple nickname-based user authentication system for identifying users and storing their reflections. |
-| 5 | Create Navigation and Layout Components | ✅ Done | Medium | 1, 4 | Develop the main layout and navigation components for the application, including header, footer, and navigation menu. |
-| 6 | Implement Date Utilities | ✅ Done | Medium | 1 | Create utility functions for date handling, formatting, and navigation between dates. |
-| 7 | Create Reflection Entry Form Component | ✅ Done | High | 3, 6 | Develop a form component for adding and editing reflection entries with fields for accomplishments, regrets, and improvements. |
-| 8 | Implement Today's Reflection Page | ✅ Done | High | 5, 6, 7 | Create the main page for viewing and editing the current day's reflection with date navigation. |
-| 9 | Create Reflection List Component | ✅ Done | Medium | 3, 6 | Develop a component to display a list of past reflections with date sorting and filtering capabilities. |
-| 10 | Implement Past Reflections Page | ✅ Done | Medium | 5, 9 | Create a page to view and navigate through past reflection entries with sorting and filtering options. |
-| 11 | Create Reflection Detail View | ✅ Done | Medium | 7, 8 | Implement a detailed view for a single reflection entry with options to edit or delete the entry. |
+| 1 | 프로젝트 설정 및 구성 | ✅ 완료 | 높음 | - | 리액트 웹 애플리케이션 프로젝트를 초기화하고 필요한 의존성과 폴더 구조를 설정합니다. |
+| 2 | 데이터베이스 스키마 설계 | ✅ 완료 | 높음 | 1 | 사용자 리플렉션 데이터를 저장할 데이터 구조를 설계합니다. (성취, 후회, 개선 항목 포함) |
+| 3 | 로컬 스토리지 서비스 구현 | ✅ 완료 | 높음 | 2 | 브라우저의 localStorage를 활용해 사용자 리플렉션 데이터를 저장/불러오는 서비스를 만듭니다. |
+| 4 | 사용자 인증 기능 구현 | ✅ 완료 | 중간 | 1, 3 | 닉네임 기반의 간단한 사용자 인증 시스템을 구현합니다. |
+| 5 | 네비게이션 및 레이아웃 컴포넌트 제작 | ✅ 완료 | 중간 | 1, 4 | 헤더, 푸터, 네비게이션 메뉴 등 앱의 주요 레이아웃과 네비게이션 컴포넌트를 만듭니다. |
+| 6 | 날짜 유틸리티 함수 구현 | ✅ 완료 | 중간 | 1 | 날짜 처리, 포맷팅, 날짜 이동을 위한 유틸리티 함수를 만듭니다. |
+| 7 | 리플렉션 입력 폼 컴포넌트 제작 | ✅ 완료 | 높음 | 3, 6 | 성취, 후회, 개선 항목을 입력/수정할 수 있는 폼 컴포넌트를 만듭니다. |
+| 8 | 오늘의 리플렉션 페이지 구현 | ✅ 완료 | 높음 | 5, 6, 7 | 오늘 날짜의 리플렉션을 보고, 입력/수정할 수 있는 메인 페이지를 만듭니다. |
+| 9 | 리플렉션 목록 컴포넌트 제작 | ✅ 완료 | 중간 | 3, 6 | 과거 리플렉션 목록을 날짜별로 정렬/필터링하여 보여주는 컴포넌트를 만듭니다. |
+| 10 | 과거 리플렉션 페이지 구현 | ✅ 완료 | 중간 | 5, 9 | 과거 리플렉션을 탐색하고 볼 수 있는 페이지를 만듭니다. |
+| 11 | 리플렉션 상세 보기 구현 | ✅ 완료 | 중간 | 7, 8 | 단일 리플렉션을 상세히 보고, 수정/삭제할 수 있는 상세 보기 페이지를 만듭니다. |
 
 ---
 
 ## 태스크 상세 정보
 
-### 1. Project Setup and Configuration
-- **상태:** ✅ Done
-- **우선순위:** High
+### 1. 프로젝트 설정 및 구성
+- **상태:** ✅ 완료
+- **우선순위:** 높음
 - **의존성:** 없음
-- **설명:** Initialize the React web application project with necessary dependencies and folder structure.
+- **설명:** 리액트 웹 애플리케이션 프로젝트를 초기화하고 필요한 의존성과 폴더 구조를 설정합니다.
 - **상세 내용:**
 ```
-1. Create a new React application using Create React App or Vite
-2. Set up project structure with folders for components, pages, services, and utils
-3. Configure ESLint and Prettier for code quality
-4. Set up routing with React Router
-5. Initialize Git repository
-6. Configure package.json with required dependencies including:
+1. Create React App 또는 Vite로 새 리액트 앱 생성
+2. 컴포넌트, 페이지, 서비스, 유틸 폴더 등 프로젝트 구조 세팅
+3. 코드 품질 유지를 위한 ESLint, Prettier 설정
+4. React Router로 라우팅 구성
+5. Git 저장소 초기화
+6. 필수 의존성(package.json) 설치 및 설정:
    - React
    - React Router
-   - State management (Context API or Redux)
-   - Date handling library (date-fns or moment)
-   - UI component library (optional)
-7. Create initial README.md with project description
+   - 상태 관리(Context API 또는 Redux)
+   - 날짜 처리 라이브러리(date-fns 또는 moment)
+   - UI 컴포넌트 라이브러리(선택)
+7. 프로젝트 설명이 담긴 초기 README.md 작성
 ```
 - **테스트 전략:**
 ```
-Verify that the application builds and runs without errors. Ensure all dependencies are correctly installed and the project structure follows best practices.
+앱이 정상적으로 빌드 및 실행되는지 확인하고, 모든 의존성이 올바르게 설치되었는지, 폴더 구조가 베스트 프랙티스를 따르는지 검증합니다.
 ```
 
-### 2. Design Database Schema
-- **상태:** ✅ Done
-- **우선순위:** High
+### 2. 데이터베이스 스키마 설계
+- **상태:** ✅ 완료
+- **우선순위:** 높음
 - **의존성:** 1
-- **설명:** Design the data structure for storing user reflection entries with fields for accomplishments, regrets, and improvements.
+- **설명:** 사용자 리플렉션 데이터를 저장할 데이터 구조를 설계합니다. (성취, 후회, 개선 항목 포함)
 - **상세 내용:**
 ```
-Create a database schema that includes:
+아래와 같은 데이터베이스 스키마를 설계합니다:
 
-1. Users table (if authentication is implemented):
-   - id (primary key)
-   - username/nickname
-   - created_at
+1. 사용자 테이블(인증 기능이 있을 경우):
+   - id (기본키)
+   - 닉네임
+   - 생성일시
 
-2. Reflections table:
-   - id (primary key)
-   - user_id (foreign key to Users)
-   - date (the date the reflection is for)
-   - created_at
-   - updated_at
+2. 리플렉션 테이블:
+   - id (기본키)
+   - user_id (사용자 테이블 참조)
+   - date (리플렉션 날짜)
+   - 생성일시
+   - 수정일시
 
-3. ReflectionEntries table (or use a JSON structure in Reflections):
-   - id (primary key)
-   - reflection_id (foreign key to Reflections)
-   - entry_type (enum: 'accomplishment', 'regret', 'improvement')
-   - content (text)
+3. 리플렉션 항목 테이블(또는 Reflections에 JSON 구조로 포함):
+   - id (기본키)
+   - reflection_id (리플렉션 테이블 참조)
+   - entry_type (enum: '성취', '후회', '개선')
+   - 내용 (텍스트)
 
-Alternatively, for a simpler local storage approach:
+간단한 로컬 스토리지 구조 예시:
 const reflectionSchema = {
   userId: String,
   reflections: [
     {
-      date: String, // ISO format
+      date: String, // ISO 포맷
       accomplishments: [String],
       regrets: [String],
       improvements: [String],
@@ -91,19 +91,17 @@ const reflectionSchema = {
 ```
 - **테스트 전략:**
 ```
-Validate the schema design by creating test data and ensuring it can accommodate all required features. Review for normalization, query efficiency, and scalability.
+테스트 데이터를 생성해 스키마가 모든 기능을 지원하는지 검증하고, 정규화, 쿼리 효율성, 확장성을 점검합니다.
 ```
-
-<!-- ... (이하 동일 패턴으로 11번까지, 하위 태스크는 별도 소제목과 표로 정리) ... -->
 
 ---
 
 ## 상태 표시
-- ✅ Done: 완료된 작업
-- 🚧 In Progress: 진행 중인 작업
-- 📝 Todo: 아직 시작하지 않은 작업
+- ✅ 완료: 완료된 작업
+- 🚧 진행 중: 작업 중
+- 📝 예정: 아직 시작하지 않은 작업
 
 ## 우선순위
-- High: 최우선 처리 필요
-- Medium: 중간 우선순위
-- Low: 낮은 우선순위
+- 높음: 최우선 처리 필요
+- 중간: 중간 우선순위
+- 낮음: 낮은 우선순위
