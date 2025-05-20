@@ -1,4 +1,4 @@
-# 데일리 리플렉션 앱 - 태스크 목록
+# Daily Reflection App - 태스크 목록
 
 ---
 
